@@ -8,7 +8,7 @@ import (
 	"errors"
 )
 
-func (c *Cryptomus) signRequest(apiKey string, reqBody []byte) string {
+func signRequest(apiKey string, reqBody []byte) string {
 	data := base64.StdEncoding.EncodeToString(reqBody)
 	hash := md5.Sum([]byte(data + apiKey))
 	return hex.EncodeToString(hash[:])
@@ -27,7 +27,7 @@ func (c *Cryptomus) VerifySign(apiKey string, reqBody []byte) error {
 	}
 	delete(jsonBody, "sign")
 
-	expectedSign := c.signRequest(apiKey, reqBody)
+	expectedSign := signRequest(apiKey, reqBody)
 	if reqSign != expectedSign {
 		return errors.New("invalid signature")
 	}
