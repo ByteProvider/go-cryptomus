@@ -17,7 +17,7 @@ This repository contains an **unofficial Go wrapper** for the Cryptomus API, a c
 To install the Cryptomus API Go wrapper, use `go get`:
 
 ```
-go get github.com/itsjoniur/go-cryptomus
+go get github.com/byteprovider/go-cryptomus
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ Here's a quick example of how to use the wrapper:
 
 import (
     "fmt"
-    "github.com/itsjoniur/go-cryptomus"
+    "github.com/byteprovider/go-cryptomus"
 )
 
 func main() {

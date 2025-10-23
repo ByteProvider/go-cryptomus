@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/itsjoniur/go-cryptomus"
+	"github.com/byteprovider/go-cryptomus"
 )
 
 var TestCryptomus *cryptomus.Cryptomus
